@@ -1,0 +1,20 @@
+
+  <div class="card h-100 shadow-sm">
+    <div class="image position-relative" style="cursor:pointer;">
+      <img src="{{movie.Poster}}"alt="{{movie.Title}}" class="img-fluid bg-light" onerror="this.src='https://bitsofco.de/content/images/2018/12/broken-1.png'">
+
+
+
+
+      <div class="d-flex align-items-center justify-content-center hover-overlay">
+
+      </div>
+    </div>
+
+    <div class="card-body d-flex flex-column">
+      <h4>{{movie.Title}}</h4>
+      <p>The {{movie.Title}} has been released on {{movie.Year}}.</p>
+      <a class="btn btn-primary" type="button" [routerLink]="['/moviedetails',movie.imdbID]">Info</a>
+    </div>
+
+  </div>

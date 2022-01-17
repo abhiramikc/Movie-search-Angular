@@ -1,0 +1,17 @@
+<div class="container" *ngIf="movieDetails">
+  <h3>{{movieDetails.Title}}</h3>
+  <h5>{{movieDetails.Rated}}</h5>
+
+  <div class="row">
+    <div class="col-xs-8">
+      <img src="{{movieDetails.Poster}}">
+    </div>
+    <div class="col-xs-4">
+      {{movieDetails.Genre}}
+    </div>
+    <h3 class="my-3">Plot</h3>
+    <p>{{ movieDetails.Plot }}</p>
+    </div>
+
+
+</div>

@@ -1,0 +1,27 @@
+<div class="myclass">
+  <div class="row g-3">
+    <div class="col-auto">
+      <label for="search" class="visually-hidden">search</label>
+      <input type="text" class="form-control col-xs-8" [(ngModel)]="search" id="search" placeholder="search movie" (keyup.enter)="searchMovie()" required>
+    </div>
+    <div class="col-auto">
+      <button type="button" [disabled]="search ===''"(click)="searchMovie()" class="btn btn-primary mb-3" >search</button>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="results">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col-4 mb-4" *ngFor="let movie of movie">
+    <app-movie-item [movie]="movie"></app-movie-item>
+      </div>
+    </div>
+</div>
+<div *ngIf="!results">
+  No Result . Please search for movies
+</div>
+
+
+
+
